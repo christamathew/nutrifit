@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script type="text/javascript">
+
+  function submitClick( )
+
+  {
+
+  alert("Thank you for your time! You'r appointment request has been received!");
+
+  }
+
+
+  function formValidation ( )
+
+  {
+
+  flag = true;
+
+  if (document.myForm.user_name.value == "" )
+
+  {
+
+  alert ( "Please fill in your Name!" );
+
+  flag = false;
+
+  }
+
+ 
+  if (!/^[a-zA-Z]*$/g.test(document.myForm.user_name.value))
+
+  {
+
+  alert("Enter alphabetic characters as Name!");
+
+  flag = false;
+
+  }
+
+  
+if (!/^\w+([\.-]?\w+)*\w+([\.-]?\w+)* (\.\w)+$/.test(myForm.user_email.value)) 
+
+ {
+
+ alert("Enter Valid Email Address!");
+
+ flag = false;
+
+ }
+
+ 
+
+ flag = true;
+
+ if (document.myForm.user_phone.value == "" )
+
+ {
+
+ alert ( "Please fill in your Phone Number!" );
+
+ flag = false;
+
+ }
+
+
+ if (!/^[0-9]*$/g.test(myForm.user_phone.value))
+
+ {
+
+ alert("Enter numeric values as Phone Number!");
+
+ flag = false;
+
+ }
+
+
+ if ((document.myForm.userGender[0].checked == false) &&  (document.myForm.userGender[1].checked == false ) )
+
+ {
+
+ alert ( "Please select your gender!" );
+
+ flag = false;
+
+ }
+
+ if (document.myForm.userAge.selectedIndex == 0 )
+
+ {
+
+ alert ( "Please select your Age from the drop-down list!" );
+
+ flag=false;
+
+ }
+
+ if (document.myForm.termsAndConditions.checked == false )
+
+ {
+
+ alert ( "Please check the Terms and Conditions box!" );
+
+ flag= false;
+
+ }
+
+ return flag;
+
+ }
+
+ </script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,900);
+* {
+  box-sizing: border-box;
+}
+
+h1.h:hover,h1.h:active{color:red;}
+.column {
+ 
+ width: 1450px;
+ height:1440px;
+ border: 15px solid black;
+ padding: 50px;
+ margin: 20px;
+ background-image:url("https://png.pngtree.com/element_our/20200610/ourlarge/pngtree-online-doctor-consultation-image_2248276.jpg");
+ }
+  .indiv {
+  float: left;
+  width: 100%;
+  padding:3px;
+  margin:1px;
+  background:linear-gradient(
+      rgba(0.2, 0, 0.5, 0.6),
+      rgba(0, 0, 0.3, 0.8));
+  height: 1250px;  
+  border:1px solid white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+body{
+background-color:gray ;
+font-family:Roboto;
+font-size:20px;
+color:white;}
+h1{
+font-family:Roboto;
+color:white;
+text-align:center;}
+
+.x {
+  background-color:black;
+  border: none;
+  color: white;
+  padding: 15px 60px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+  cursor: pointer;
+  margin-left:auto;
+  margin-right:auto;
+  display:block;
+  
+  }
+  
+  .x:hover{
+   
+   color: black; 
+   background-color:azure;
+}
+  
+</style>
+</head>
+<body>
+
+<div class="row">
+  <div class="column"><div class="indiv">
+  <h1 class="h">Internal/Family Medicine Consultation</h1>
+  <h3><u>About</u></h3>
+  <p>Internal/Family Medicine specialists provide long-term, comprehensive care and can manage both common and complex diseases. They examine, diagnose, treat acute illnesses (e.g., infections, influenza) and chronic diseases (e.g., diabetes, high blood pressure)</p>
+  <h3><u>Symptoms</u></h3>
+  <h4>Why and when should I consult an Internal Medicine Specialist?</h4>
+  <p>Internal/Family Medicine specialists provide long-term, comprehensive care and can manage both common and complex diseases. They examine, diagnose, treat acute illnesses (e.g., infections, influenza) and chronic diseases (e.g., diabetes, high blood pressure). 
+
+If you are experiencing any of the below mentioned symptoms, you are requested to consult an internal/family medicine specialist at the earliest. 
+
+<ul><li>If you have been experiencing any kind of inexplicable body pain for a few days</li>. 
+
+<li>If you have had high blood pressure for some time now.</li> 
+
+<li>If you have been sneezing continuously or have a running nose.</li> 
+
+<li>When your body temperature has been on the higher side persistently despite following general precautions.</li> 
+
+<li>All the above-mentioned symptoms can seem very trivial at face value, however, they might just be the window to something fatal which you should get treatment at the earliest.</li></ul></p>
+<h3><u>Benefits</u></h3>
+<h4>What are the benefits of doing an Online ENT Consultation?</h4>
+<ul><li>Best Doctors: Connect with the Best Internal Medicine Specialist in the country to get accurate diagnosis and the best possible treatment options for your condition </li>
+
+<li>No wait time: You do not have to worry about waiting in line at a doctors clinic as the consultation starts exactly at the time chosen by you.</li> 
+
+<li>Digital records: All your prescriptions from the doctor and medical records are digitized which gives you the convenience of accessing it from just about anywhere and at any time.</li>
+
+<li>Free follow up session: Get a free follow-up within 8 days of your consultation.</li>
+
+<li>Convenience: Our objective at carefit is to facilitate best services in a hassle-free manner.</li></ul>
+<h4>Please fill out your details below:</h4>
+
+ <p>Name: <input type="text" name="user_name"></p>
+
+ <p>Email: <input type="text" name="user_email"></p>
+
+ <p>Phone: <input type="text" name="user_phone"></p>
+
+ <p>Gender: <input type="radio" name="userGender" value="Male">Male
+
+ &nbsp; <input type="radio" name="userGender" value="Female">Female</p>
+
+ <p>Age:
+
+ <select name="userAge">
+
+ <option value="">Please select your age:</option>
+
+ <option value="0-3 years">0-12 years</option>
+
+ <option value="4-8 years">13-25 years</option>
+
+ <option value="9-12 years">26-50 years</option>
+<option value="9-12 years">50-80 years</option>
+
+</select>
+
+<p class='x'><input type="submit" name="send" value="Submit Details" onClick="submitClick( )"></p>
+
+</form>
+
+  </div>
+  </div>
+  </div>
+  </body>
+  </html>

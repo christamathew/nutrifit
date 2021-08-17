@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body{
+background-image:url("https://onlinedoctor.chat/wp-content/uploads/2020/04/untitled-2.png");
+
+font-family:Georgia;
+}
+h1{
+background-color: khaki;
+text-align:center;
+font-size:40px;
+}
+h2{
+text-align:center;}
+label{
+font-size:20px;}
+p{
+font-size:20px;}
+table{
+width:500px;
+text-align:right;}
+div{
+width:500px;
+height:450px;
+border:1px solid black;
+text-align:left;
+padding:10px;
+background:linear-gradient(
+      rgba(255, 255, 255, 0.6),
+      rgba(255, 255, 255, 0.6)); }
+      ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: grey;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 3px 15px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+</style>
+<body>
+  <ul>
+    <li><a href="about_us.html" >About Us</a></li>
+    <li><a href="health.html" >Health</a></li>
+    <li><a href="exercise.html" >Workouts</a></li>
+    <li><a href="diet_into.html" >Diet Plans</a></li>
+     <li><a href="consult.html" >Consultation Services</a></li>
+    
+  </ul>
+<center>
+<h1>GOOD HEALTH IS ABOVE WEALTH</h1>
+<div>
+<p>Please enter the following details:</p>
+<table><tr><td>
+<label for="age">Age</label> </td><td>
+<input type="number" id="age"><br></td></tr><tr><td>
+<label for="weight">Weight in kg</label> </td><td> 
+<input type="number" id="weight"><br></td><tr><td>
+<label for="height">Height in cm</label></td><td>
+<input type="number" id="height"><br></td></tr></table>
+<p>Please mark the problems you are suffering from:</p>
+<table><tr><td>
+<label for="thirst">Increased Thirst</label> 
+<input type="checkbox" id="thirst" onclick="myFunction()"><br>
+<label for="urination">Frequent Urination</label> 
+<input type="checkbox" id="urination" onclick="myFunction()"><br>
+<label for="fever">Fever</label> 
+<input type="checkbox" id="fever" onclick="myFunction()"><br>
+<label for="hunger">Hunger</label> 
+<input type="checkbox" id="hunger" onclick="myFunction()"><br>
+<label for="fatigue">Fatigue</label> 
+<input type="checkbox" id="fatigue" onclick="myFunction()"><br></td><td>
+<label for="blur_vision">Blurred Vision</label> 
+<input type="checkbox" id="blur_vision" onclick="myFunction()"><br>
+<label for="weightloss">Weightloss</label> 
+<input type="checkbox" id="weightloss" onclick="myFunction()"><br>
+<label for="itchy_skin">Itchy skin</label> 
+<input type="checkbox" id="itchy_skin" onclick="myFunction()"><br>
+<label for="tiredness">Tiredness</label> 
+<input type="checkbox" id="tiredness" onclick="myFunction()"><br>
+<label for="loss_appetite">Loss of appetite</label> 
+<input type="checkbox" id="loss_appetite" onclick="myFunction()"><br>
+<label for="hbp">High blood pressure</label> 
+<input type="checkbox" id="hbp" onclick="myFunction()"><br></td></tr></table>
+<h2 id="text"></h2>
+</div>
+<script>
+function myFunction() {
+  var thirst= document.getElementById("thirst");
+  var urination= document.getElementById("urination");
+  var hunger= document.getElementById("hunger");
+  var fatigue= document.getElementById("fatigue");
+  var blur_vision= document.getElementById("blur_vision");
+  if(thirst.checked == true){
+  if (urination.checked == true){
+    if (hunger.checked == true){
+	if (fatigue.checked == true){
+	if (blur_vision.checked == true){
+    document.getElementById("text").innerHTML = "You have symptoms of Diabetes. Please consult a doctor.";}
+  }}}}
+  else {
+     text.style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>

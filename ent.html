@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script type="text/javascript">
+
+  function submitClick( )
+
+  {
+
+  alert("Thank you for your time! You'r appointment request has been received!");
+
+  }
+
+
+  function formValidation ( )
+
+  {
+
+  flag = true;
+
+  if (document.myForm.user_name.value == "" )
+
+  {
+
+  alert ( "Please fill in your Name!" );
+
+  flag = false;
+
+  }
+
+ 
+  if (!/^[a-zA-Z]*$/g.test(document.myForm.user_name.value))
+
+  {
+
+  alert("Enter alphabetic characters as Name!");
+
+  flag = false;
+
+  }
+
+  
+ if (/^\w+([\.-]?\w+)*\w+([\.-]?\w+)* (\.\w)+$/.test(myForm.user_email.value)) 
+
+ {
+
+ alert("Enter Valid Email Address!");
+
+ flag = false;
+
+ }
+
+ 
+
+ flag = true;
+
+ if (document.myForm.user_phone.value == "" )
+
+ {
+
+ alert ( "Please fill in your Phone Number!" );
+
+ flag = false;
+
+ }
+
+
+ if (!/^[0-9]*$/g.test(myForm.user_phone.value))
+
+ {
+
+ alert("Enter numeric values as Phone Number!");
+
+ flag = false;
+
+ }
+
+
+ if ((document.myForm.userGender[0].checked == false) &&  (document.myForm.userGender[1].checked == false ) )
+
+ {
+
+ alert ( "Please select your gender!" );
+
+ flag = false;
+
+ }
+
+ if (document.myForm.userAge.selectedIndex == 0 )
+
+ {
+
+ alert ( "Please select your Age from the drop-down list!" );
+
+ flag=false;
+
+ }
+
+ if (document.myForm.termsAndConditions.checked == false )
+
+ {
+
+ alert ( "Please check the Terms and Conditions box!" );
+
+ flag= false;
+
+ }
+
+ return flag;
+
+ }
+
+ </script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,900);
+* {
+  box-sizing: border-box;
+}
+
+h1.h:hover,h1.h:active{color:red;}
+.column {
+ 
+ width: 1200px;
+ height:1480px;
+ border: 15px solid black;
+ padding: 50px;
+ margin: 20px;
+ background-image:url("data:image/jpeg;base64,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");
+  
+}
+ .indiv {
+  float: left;
+  width: 100%;
+  padding:3px;
+  margin:1px;
+  background:linear-gradient(
+      rgba(0, 0, 0.5, 0.7),
+      rgba(0, 0, 0.3, 0.7));
+  height: 1350px;  
+  border:1px solid white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+body{
+background-color:gray ;
+font-family:Roboto;
+font-size:20px;
+color:white;}
+h1{
+font-family:Roboto;
+color:white;
+text-align:center;}
+
+.x {
+  background-color:black;
+  border: none;
+  color: white;
+  padding: 15px 60px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+  cursor: pointer;
+  margin-left:auto;
+  margin-right:auto;
+  display:block;
+  
+  }
+  
+  .x:hover{
+   
+   color: black; 
+   background-color:azure;
+}
+  
+</style>
+</head>
+<body>
+
+<div class="row">
+  <div class="column"><div class="indiv">
+  <h1 class="h">ENT Consultation</h1>
+  <h3><u>About</u></h3>
+  <p>ENT doctor specializes in treatment of ear, nose and throat and related areas in your head and neck. They treat ear infection, hearing loss, trouble with balance, allergies, sinusitis, tonsillitis, swallowing and voice issues. They can also help with snoring or apnea.</p>
+    <h3><u>Symptoms</u></h3>
+  <h4>Why and when should I consult an ENT Specialist?</h4>
+  <p>ENT doctors specialize in the treatment of ear, nose, and throat and related areas in your head and neck. They treat ear infection, hearing loss, trouble with balance, allergies, sinusitis, tonsillitis, swallowing, voice issues along with with snoring or apnea. \nThere are many signs and symptoms that act as indicators for you to meet an ENT specialist and through an online doctor consultation. Some of the symptoms that warrant consulting an ENT specialist are: 
+
+<ul><li>Runny Nose: It is one of the common issues that affect even a healthy human at some point or another. The causes for a runny nose are many and most common is colds and allergies. But If you have a fever and a cough along with a postnasal drip you should see a doctor. 
+A nose doctor online will prescribe antihistamines and other medications to treat it.</li> 
+
+<li>Hearing Loss: Problems with hearing or temporary hearing loss can happen when you hear loud noise or music. But if it persists, consult an ear specialist to ensure there is no permanent hearing loss.</li> 
+
+<li>Nose Irritation: An allergy doctor can treat nose irritation as it happens usually due to allergies or a common cold. But if it is persistent then an ENT specialist can treat problems that affect the sinus and affect the breathing and smell.</li> 
+
+<li>Sore throat: It is common in the cold season and hence most people use home remedies to treat it. But if you have a sore throat where even drinking a sip of water is difficult then it is recommended that you book an appointment to rule out serious issues.</li> 
+
+<li>Throat infection: It can affect speech, swallowing, and other activities and an ENT doctor can manage and treat the problems that caused the infection.</li></ul></p>
+<h3><u>Benefits</u></h3>
+<h4>What are the benefits of doing an Online ENT Consultation?</h4>
+<ul><li>Best Doctors: Connect with the Best ENT Specialists in the country to get accurate diagnosis and the best possible treatment options for your condition </li>
+
+<li>No wait time: You do not have to worry about waiting in line at a doctors clinic as the consultation starts exactly at the time chosen by you.</li> 
+
+<li>Digital records: All your prescriptions from the doctor and medical records are digitized which gives you the convenience of accessing it from just about anywhere and at any time.</li>
+
+<li>Free follow up session: Get a free follow-up within 8 days of your consultation.</li>
+
+<li>Convenience: Our objective at carefit is to facilitate best services in a hassle-free manner.</li></ul>
+<form name="myForm" method="post" onSubmit=" return formValidation( );" >
+
+ <h4>Please fill out your details below:</h4>
+
+ <p>Name: <input type="text" name="user_name"></p>
+
+ <p>Email: <input type="text" name="user_email"></p>
+
+ <p>Phone: <input type="text" name="user_phone"></p>
+
+ <p>Gender: <input type="radio" name="userGender" value="Male">Male
+
+ &nbsp; <input type="radio" name="userGender" value="Female">Female</p>
+
+ <p>Age:
+
+ <select name="userAge">
+
+ <option value="">Please select your age:</option>
+
+ <option value="0-3 years">0-12 years</option>
+
+ <option value="4-8 years">13-25 years</option>
+
+ <option value="9-12 years">26-50 years</option>
+<option value="9-12 years">50-80 years</option>
+
+</select>
+
+<p class='x'><input type="submit" name="send" value="Submit Details" onClick="submitClick( )"></p>
+
+</form>
+
+  </div>
+  </div>
+  </div>
+  </body>
+  </html>
+
+ 

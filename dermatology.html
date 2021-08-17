@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script type="text/javascript">
+
+  function submitClick( )
+
+  {
+
+  alert("Thank you for your time! You'r appointment request has been received!");
+
+  }
+
+
+  function formValidation ( )
+
+  {
+
+  flag = true;
+
+  if (document.myForm.user_name.value == "" )
+
+  {
+
+  alert ( "Please fill in your Name!" );
+
+  flag = false;
+
+  }
+
+ 
+  if (!/^[a-zA-Z]*$/g.test(document.myForm.user_name.value))
+
+  {
+
+  alert("Enter alphabetic characters as Name!");
+
+  flag = false;
+
+  }
+
+  
+if (/^\w+([\.-]?\w+)*\w+([\.-]?\w+)* (\.\w)+$/.test(myForm.user_email.value)) 
+
+ {
+
+ alert("Enter Valid Email Address!");
+
+ flag = false;
+
+ }
+
+ 
+
+ flag = true;
+
+ if (document.myForm.user_phone.value == "" )
+
+ {
+
+ alert ( "Please fill in your Phone Number!" );
+
+ flag = false;
+
+ }
+
+
+ if (!/^[0-9]*$/g.test(myForm.user_phone.value))
+
+ {
+
+ alert("Enter numeric values as Phone Number!");
+
+ flag = false;
+
+ }
+
+
+ if ((document.myForm.userGender[0].checked == false) &&  (document.myForm.userGender[1].checked == false ) )
+
+ {
+
+ alert ( "Please select your gender!" );
+
+ flag = false;
+
+ }
+
+ if (document.myForm.userAge.selectedIndex == 0 )
+
+ {
+
+ alert ( "Please select your Age from the drop-down list!" );
+
+ flag=false;
+
+ }
+
+ if (document.myForm.termsAndConditions.checked == false )
+
+ {
+
+ alert ( "Please check the Terms and Conditions box!" );
+
+ flag= false;
+
+ }
+
+ return flag;
+
+ }
+
+ </script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,900);
+* {
+  box-sizing: border-box;
+}
+
+h1.h:hover,h1.h:active{color:red;}
+.column {
+ 
+ width: 1200px;
+ height:1480px;
+ border: 15px solid black;
+ padding: 50px;
+ margin: 20px;
+ background-image:url("https://as2.ftcdn.net/jpg/02/56/04/47/500_F_256044762_wzCejFUv9x2Xl2l0FKg926RGe4R2GFW2.jpg");
+  
+}
+ .indiv {
+  float: left;
+  width: 100%;
+  padding:3px;
+  margin:1px;
+  background:linear-gradient(
+      rgba(0, 0, 0.5, 0.7),
+      rgba(0, 0, 0.3, 0.8));
+  height: 1330px;  
+  border:1px solid white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+body{
+background-color:gray ;
+font-family:Roboto;
+font-size:20px;
+color:white;}
+h1{
+font-family:Roboto;
+color:white;
+text-align:center;}
+
+.x {
+  background-color:black;
+  border: none;
+  color: white;
+  padding: 15px 60px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+  cursor: pointer;
+  margin-left:auto;
+  margin-right:auto;
+  display:block;
+  
+  }
+  
+  .x:hover{
+   
+   color: black; 
+   background-color:azure;
+}
+  
+</style>
+</head>
+<body>
+
+<div class="row">
+  <div class="column"><div class="indiv">
+  <h1 class="h">Dermatology Consultation</h1>
+  <h3><u>About</u></h3>
+  <p>Dermatologist specializes in issues related to Skin and Hair. They treat conditions, disorders and inflammatory symptoms of any age and gender. Common problems like Acne, Pigmentation, Hair Fall, Loose Skin, Excess Hair, Warts are treated.</p>
+  <h3><u>Symptoms</u></h3>
+  <h4>Why and when should I consult a Pediatrician?</h4>
+  <p>Online video consultation with one of our top Dermatologists guarantees you a prompt and direct response which is not only essential to determine the need for intervention but also helps prevent it from getting worse. As a holistic health care provider, Nutrifit gives you easy online access to its eminent doctors, helping you take and make the best possible decisions for your condition.
+  <ul><li>Boil: It is a skin infection that is usually caused by bacteria. Initially, it appears as a skin rash in the affected area. After a few days, the limp gets filled with pus and becomes painful. Normally small boils can be cured through home remedies, but if it becomes painful and results in fever then it is time to consult a doctor. </li>
+ 
+<li>Bruises: It usually happens due to a fall or any other type of injury. It happens when there is bleeding under the skin due to the trauma of a fall or injury. It appears black and blue and starts to change color. If the black and blue colour does reduce even after two weeks, it may need to be looked at by a doctor. </li>
+ 
+<li>Dandruff: It is a common problem that occurs on the scalp. The skin on the scalp becomes flaky and starts to itchy. If over the counter shampoo does not reduce the itch and flakes look online for a dermatologist near you. </li>
+ 
+<li>Dry Skin: Another common condition that can happen to any part of the skin. If home remedies do not solve the issue, a dermatologist visit can.</li></p>
+ <h3><u>Benefits</u></h3>
+<h4>What are the benefits of doing an Online Dermatologist Consultation?</h4> 
+<ul><li> Best Doctors: Connect with the Best Dermatologist in the country to get accurate diagnosis and the best possible treatment options for your condition.</li> 
+ 
+<li>No wait time: You do not have to worry about waiting in line at a doctors clinic as the consultation starts exactly at the time chosen by you.</li> 
+ 
+<li>Digital records: All your prescriptions from the doctor and medical records are digitized which gives you the convenience of accessing it from just about anywhere and at any time.</li> 
+ 
+<li>Free follow up session: Get a free follow-up within 8 days of your consultation.</li> 
+ 
+<li>Convenience: Our objective at Care.Fit is to facilitate best services in a hassle free manner. You can pick the time slot as per your convenience and get the consultation from doctors at the comfort of your home.</li></ul>
+<form name="myForm" method="post" onSubmit=" return formValidation( );" >
+
+ <h4>Please fill out your details below:</h4>
+
+ <p>Name: <input type="text" name="user_name"></p>
+
+ <p>Email: <input type="text" name="user_email"></p>
+
+ <p>Phone: <input type="text" name="user_phone"></p>
+
+ <p>Gender: <input type="radio" name="userGender" value="Male">Male
+
+ &nbsp; <input type="radio" name="userGender" value="Female">Female</p>
+
+ <p>Age:
+
+ <select name="userAge">
+
+ <option value="">Please select your age:</option>
+
+ <option value="0-3 years">0-12 years</option>
+
+ <option value="4-8 years">13-25 years</option>
+
+ <option value="9-12 years">26-50 years</option>
+<option value="9-12 years">50-80 years</option>
+
+</select>
+
+<p class='x'><input type="submit" name="send" value="Submit Details" onClick="submitClick( )"></p>
+
+</form>
+
+  </div>
+  </div>
+  </div>
+  </body>
+  </html>
+
+ 

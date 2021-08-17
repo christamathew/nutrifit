@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script type="text/javascript">
+
+  function submitClick( )
+
+  {
+
+  alert("Thank you for your time! You'r appointment request has been received!");
+
+  }
+
+
+  function formValidation ( )
+
+  {
+
+  flag = true;
+
+  if (document.myForm.user_name.value == "" )
+
+  {
+
+  alert ( "Please fill in your Name!" );
+
+  flag = false;
+
+  }
+
+ 
+  if (!/^[a-zA-Z]*$/g.test(document.myForm.user_name.value))
+
+  {
+
+  alert("Enter alphabetic characters as Name!");
+
+  flag = false;
+
+  }
+
+  
+ if (/^\w+([\.-]?\w+)*\w+([\.-]?\w+)* (\.\w)+$/.test(myForm.user_email.value)) 
+
+ {
+
+ alert("Enter Valid Email Address!");
+
+ flag = false;
+
+ }
+
+ 
+
+ flag = true;
+
+ if (document.myForm.user_phone.value == "" )
+
+ {
+
+ alert ( "Please fill in your Phone Number!" );
+
+ flag = false;
+
+ }
+
+
+ if (!/^[0-9]*$/g.test(myForm.user_phone.value))
+
+ {
+
+ alert("Enter numeric values as Phone Number!");
+
+ flag = false;
+
+ }
+
+
+ if ((document.myForm.userGender[0].checked == false) &&  (document.myForm.userGender[1].checked == false ) )
+
+ {
+
+ alert ( "Please select your gender!" );
+
+ flag = false;
+
+ }
+
+ if (document.myForm.userAge.selectedIndex == 0 )
+
+ {
+
+ alert ( "Please select your Age from the drop-down list!" );
+
+ flag=false;
+
+ }
+
+ if (document.myForm.termsAndConditions.checked == false )
+
+ {
+
+ alert ( "Please check the Terms and Conditions box!" );
+
+ flag= false;
+
+ }
+
+ return flag;
+
+ }
+
+ </script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,900);
+* {
+  box-sizing: border-box;
+}
+
+h1.h:hover,h1.h:active{color:red;}
+.column {
+ 
+ width: 1200px;
+ height:1480px;
+ border: 15px solid black;
+ padding: 50px;
+ margin: 20px;
+ background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQaiv7e3hImtxoki_v3_7zUd77kl0Z6FTH6UQ&usqp=CAU");
+  
+}
+ .indiv {
+  float: left;
+  width: 100%;
+  padding:3px;
+  margin:1px;
+  background:linear-gradient(
+      rgba(0, 0, 0.5, 0.7),
+      rgba(0, 0, 0.3, 0.7));
+  height: 1350px;  
+  border:1px solid white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+body{
+background-color:gray ;
+font-family:Roboto;
+font-size:20px;
+color:white;}
+h1{
+font-family:Roboto;
+color:white;
+text-align:center;}
+
+.x {
+  background-color:black;
+  border: none;
+  color: white;
+  padding: 15px 60px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+  cursor: pointer;
+  margin-left:auto;
+  margin-right:auto;
+  display:block;
+  
+  }
+  
+  .x:hover{
+   
+   color: black; 
+   background-color:azure;
+}
+  
+</style>
+</head>
+<body>
+
+<div class="row">
+  <div class="column"><div class="indiv">
+  <h1 class="h">Psychiatrist Consultation</h1>
+  <h3><u>About</u></h3>
+  <p>Psychiatrists are medical experts specializing in mental health, and who can prescribe medication when needed.</p>
+  <h3><u>Symptoms</u></h3>
+  <h4>Why and when should I consult a Psychiatrist?</h4>
+  <p>We often come across several stresses and problems in our daily lives that can upset our mental balance. Sometimes we can handle these mental issues ourselves and sometimes, when the situation is difficult, we require an intervention from a psychiatrist. Working with a psychiatrist can help in dealing with our problems better and sometimes even enhancing our lives.<br>
+  Here are a few symptoms of mental health declination that suggests that it is time you must consult a Clinical Psychiatrist 
+<ul><li>Stress and Anxiety: while stress is a common emotion, sometimes it can get overwhelming and cause more damage to your mental and physical health.</li> 
+
+<li>Feelings of Helplessness or Hopelessness.: This is a common symptom of depression and requires immediate attention as if left unattended can trigger one to cause self-harm.</li> 
+
+<li>Unhealthy Habits and Addictions: An addiction to drugs, alcohol or anything that is harming your health.</li> 
+
+<li>Insomnia : Sleep is very important for a healthy functioning of your body, if you have trouble falling asleep, it could be an underlying cause of a mental health issue.</li> 
+
+<li>Low Mood :  feeling low sometimes is alright. However, if you have been feeling low constantly, it is something that needs to be treated.</li> 
+
+<li>Forgetfulness: Forgetfulness can be caused due to a cluttered mind. In most cases, it requires help to strengthen our thoughts and focus on what is needed.</li> 
+
+<li>Lack of Appetite : our gut and mind has a direct relation. Stress can cause us to lose our appetite and is a clear sign of mental stress.</li></ul></p>
+<h3><u>Benefits</u></h3>
+<h4>What are the benefits of doing an Online Psychiatrist Consultation?</h4>
+<ul><li>Best Doctors: Connect with the Best Psychiatrist in the country to get accurate diagnosis and the best possible treatment options for your condition </li>
+ 
+<li>No wait time: You do not have to worry about waiting in line at a doctors clinic as the consultation starts exactly at the time chosen by you.</li> 
+
+<li>Digital records: All your prescriptions from the doctor and medical records are digitized which gives you the convenience of accessing it from just about anywhere and at any time.</li>
+
+<li>Free follow up session: Get a free follow-up within 8 days of your consultation.</li>
+
+<li>Convenience: Our objective at carefit is to facilitate best services in a hassle-free manner.</li> </ul>
+<form name="myForm" method="post" onSubmit=" return formValidation( );" >
+
+ <h4>Please fill out your details below:</h4>
+
+ <p>Name: <input type="text" name="user_name"></p>
+
+ <p>Email: <input type="text" name="user_email"></p>
+
+ <p>Phone: <input type="text" name="user_phone"></p>
+
+ <p>Gender: <input type="radio" name="userGender" value="Male">Male
+
+ &nbsp; <input type="radio" name="userGender" value="Female">Female</p>
+
+ <p>Age:
+
+ <select name="userAge">
+
+ <option value="">Please select your age:</option>
+
+ <option value="0-3 years">0-12 years</option>
+
+ <option value="4-8 years">13-25 years</option>
+
+ <option value="9-12 years">26-50 years</option>
+<option value="9-12 years">50-80 years</option>
+
+</select>
+
+<p class='x'><input type="submit" name="send" value="Submit Details" onClick="submitClick( )"></p>
+
+</form>
+
+  </div>
+  </div>
+  </div>
+  </body>
+  </html>
+
+ 
